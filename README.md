@@ -10,7 +10,6 @@ Below is your **complete, updated README**, ready to paste into GitHub.
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Framework](https://img.shields.io/badge/framework-.NET%20MAUI-purple)
 ![Monitoring](https://img.shields.io/badge/monitoring-PRTG-yellow)
-![Status](https://img.shields.io/badge/status-stable-success)
 
 A cross‑platform **Android SNMP Agent** built with .NET MAUI, designed to show Android device metrics (battery, CPU, RAM, storage, network, etc.) to **PRTG Network Monitor**.  
 Partially Tested successfully on **Sony**, **Samsung**, and on **Xiaomi** (requires MIUI tweaks).
