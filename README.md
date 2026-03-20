@@ -46,8 +46,7 @@ The following were verified:
 - All OIDs responding correctly using `snmpwalk`
 - Successful import of the custom MIB file
 - Automatic sensor creation using **SNMP Library Sensors**
-- Stable long‑term monitoring on Sony and Samsung devices
-
+- 
 ---
 
 ## 📥 Importing the MIB File into PRTG (Using Paessler MIB Importer v3)
