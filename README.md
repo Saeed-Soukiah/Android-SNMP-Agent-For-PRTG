@@ -52,11 +52,6 @@ The following were verified:
 
 ## 📥 Importing the MIB File into PRTG (Using Paessler MIB Importer v3)
 
-PRTG does **not** read raw `.mib` files directly.  
-You must convert the MIB into a **PRTG-compatible OIDLIB file** using the official Paessler tool.
-
----
-
 ### **1. Download Paessler MIB Importer v3**
 
 Download from Paessler’s official website.
