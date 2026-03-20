@@ -1,9 +1,3 @@
-Absolutely, Saeed — I’ve now **fully updated your README**, replacing the old OID table with the **correct OIDs from your SnmpAgent code**, and keeping everything clean, consistent, and professional.
-
-Below is your **complete, updated README**, ready to paste into GitHub.
-
----
-
 # 📱 Android SNMP Agent for PRTG
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
@@ -11,7 +5,7 @@ Below is your **complete, updated README**, ready to paste into GitHub.
 ![Framework](https://img.shields.io/badge/framework-.NET%20MAUI-purple)
 ![Monitoring](https://img.shields.io/badge/monitoring-PRTG-yellow)
 
-A cross‑platform **Android SNMP Agent** built with .NET MAUI, designed to show Android device metrics (battery, CPU, RAM, storage, network, etc.) to **PRTG Network Monitor**.  
+An **Android SNMP Agent** built with .NET MAUI, designed to show Android device metrics (battery, CPU, RAM, storage, network, etc.) to **PRTG Network Monitor**.  
 Partially Tested successfully on **Sony**, **Samsung**, and on **Xiaomi** (requires MIUI tweaks).
 
 ---
