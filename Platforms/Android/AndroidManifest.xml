@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.SSG.phonesnmpagent">
+
+	<!-- Absolutely required for SNMP agent -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+	<!-- Required for WiFi RSSI, GPS accuracy, cell tower, network type -->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+	<!-- Required for signal strength, network type -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+	<!-- Required for foreground app detection -->
+	<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+
+	<!-- Bluetooth metrics -->
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+	<!-- Required to keep SNMP agent alive -->
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+	<application android:allowBackup="true"
+                 android:label="Phone SNMP Agent"
+                 android:icon="@mipmap/appicon">
+
+		<!-- Foreground SNMP service -->
+		<service
+            android:name=".SnmpService"
+            android:exported="true"
+            android:foregroundServiceType="dataSync" />
+	</application>
+
+</manifest>

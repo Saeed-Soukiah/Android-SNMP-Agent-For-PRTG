@@ -1,0 +1,179 @@
+PHONE-SNMP-MIB DEFINITIONS ::= BEGIN
+
+IMPORTS
+    enterprises, Integer32, OBJECT-TYPE, MODULE-IDENTITY
+        FROM SNMPv2-SMI
+    DisplayString
+        FROM SNMPv2-TC;
+
+phoneSnmp MODULE-IDENTITY
+    LAST-UPDATED "202502120000Z"
+    ORGANIZATION "Phone SNMP Agent"
+    CONTACT-INFO "Saeedsoukiah@gmail.com"
+    DESCRIPTION "Android phone monitoring via SNMP"
+    ::= { enterprises 55555 }
+
+phoneMetrics OBJECT IDENTIFIER ::= { phoneSnmp 1 }
+
+batteryLevel OBJECT-TYPE
+    SYNTAX      Integer32 (0..100)
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Battery level in percent"
+    ::= { phoneMetrics 1 }
+
+freeRamMB OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Free RAM in MB"
+    ::= { phoneMetrics 2 }
+
+freeStorageMB OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Free internal storage in MB"
+    ::= { phoneMetrics 3 }
+
+signalStrength OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Cellular signal strength in dBm"
+    ::= { phoneMetrics 4 }
+
+uptimeSeconds OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Seconds since device boot"
+    ::= { phoneMetrics 5 }
+
+cpuUsage OBJECT-TYPE
+    SYNTAX      Integer32 (0..100)
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "CPU usage percent"
+    ::= { phoneMetrics 6 }
+
+wifiRssi OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Wi-Fi RSSI in dBm"
+    ::= { phoneMetrics 7 }
+
+networkType OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "0=none, 1=wifi, 2=cellular"
+    ::= { phoneMetrics 8 }
+
+batteryTemperature OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Battery temperature in Celsius"
+    ::= { phoneMetrics 9 }
+
+chargingState OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "0=Not charging, 1=Charging, 2=Full"
+    ::= { phoneMetrics 10 }
+
+mobileDataUsageMB OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Mobile data usage in MB since boot"
+    ::= { phoneMetrics 11 }
+
+wifiLinkSpeed OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Wi-Fi link speed in Mbps"
+    ::= { phoneMetrics 12 }
+
+gpsAccuracy OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "GPS accuracy in meters"
+    ::= { phoneMetrics 13 }
+
+bluetoothStatus OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "0=Off, 1=On"
+    ::= { phoneMetrics 14 }
+
+appMemoryUsageMB OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Memory usage of the SNMP app in MB"
+    ::= { phoneMetrics 15 }
+
+thermalState OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "0=Normal, 1=Light, 2=Moderate, 3=Severe throttling"
+    ::= { phoneMetrics 16 }
+
+wifiTrafficMB OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Wi-Fi traffic in MB since boot"
+    ::= { phoneMetrics 17 }
+
+mobileTrafficMB OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Mobile traffic in MB since boot"
+    ::= { phoneMetrics 18 }
+
+cpuTemperature OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "CPU temperature in Celsius"
+    ::= { phoneMetrics 19 }
+
+screenState OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "0=Off, 1=On"
+    ::= { phoneMetrics 20 }
+
+foregroundApp OBJECT-TYPE
+    SYNTAX      DisplayString
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Package name of foreground app"
+    ::= { phoneMetrics 21 }
+
+batteryHealth OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Battery health enum from Android"
+    ::= { phoneMetrics 22 }
+
+cellTowerId OBJECT-TYPE
+    SYNTAX      Integer32
+    MAX-ACCESS  read-only
+    STATUS      current
+    DESCRIPTION "Cell tower ID (CID)"
+    ::= { phoneMetrics 23 }
+
+END

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Override the default Maui splash theme to use a custom window background -->
+  <style name="Maui.SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Use our custom drawable which shows a solid color and the app icon centered -->
+    <item name="android:windowBackground">@drawable/launch_background</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
+  </style>
+</resources>

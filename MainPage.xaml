@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PhoneSnmpAgent.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#121212">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <!-- Header -->
+            <VerticalStackLayout HorizontalOptions="Center">
+                <Label Text="Android SNMP Agent"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="#4DB8FF"
+                       HorizontalOptions="Center" />
+
+                <Border
+                    BackgroundColor="#1E1E1E"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 12"
+                    Padding="10"
+                    WidthRequest="180"
+                    HorizontalOptions="Center">
+
+                    <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                        <BoxView WidthRequest="12"
+                                 HeightRequest="12"
+                                 CornerRadius="6"
+                                 Color="{Binding AgentStatusColor}" />
+
+                        <Label Text="{Binding AgentStatus}"
+                               FontSize="18"
+                               TextColor="White" />
+                    </HorizontalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+
+            <!-- Control Buttons -->
+            <VerticalStackLayout Spacing="15">
+
+                <Button Text="Start SNMP Agent"
+                        FontSize="20"
+                        BackgroundColor="#2ECC71"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="55"
+                        Command="{Binding StartAgentCommand}" />
+
+                <Button Text="Stop SNMP Agent"
+                        FontSize="20"
+                        BackgroundColor="#E74C3C"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="55"
+                        Command="{Binding StopAgentCommand}" />
+
+            </VerticalStackLayout>
+
+            <!-- Info Card -->
+            <Border
+                BackgroundColor="#1E1E1E"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 14"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="About This Agent"
+                           FontSize="22"
+                           TextColor="#4DB8FF"
+                           FontAttributes="Bold" />
+
+                    <Label Text="This Android device is running a custom SNMP agent that exposes battery, CPU, network, GPS, and system metrics for monitoring tools such as PRTG."
+                           FontSize="16"
+                           TextColor="#CCCCCC" />
+
+                    <Label Text="Port: 16100"
+                           FontSize="16"
+                           TextColor="#AAAAAA" />
+
+                    <Label Text="Protocol: SNMP v2c"
+                           FontSize="16"
+                           TextColor="#AAAAAA" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- Developer Info Card -->
+            <Border
+                BackgroundColor="#1E1E1E"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 14"
+                Padding="20">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="About the Developer"
+                           FontSize="22"
+                           TextColor="#4DB8FF"
+                           FontAttributes="Bold" />
+
+                    <Label Text="This application was developed by:"
+                           FontSize="16"
+                           TextColor="#CCCCCC" />
+
+                    <Label Text="Saeed Soukiah"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="White" />
+
+                    <Label Text="Email: saeedsoukiah@email.com"
+                           FontSize="16"
+                           TextColor="#AAAAAA" />
+
+                    <Label Text="GitHub: https://github.com/Saeed-Soukiah/"
+                           FontSize="16"
+                           TextColor="#4DB8FF" />
+
+                    <BoxView HeightRequest="1" Color="#333333" />
+
+                    <Label Text="This software is protected by copyright. Redistribution, modification, or republishing without permission is prohibited."
+                           FontSize="14"
+                           TextColor="#888888" />
+
+                    <Label Text="© 2026 SSG. All Rights Reserved."
+                           FontSize="14"
+                           HorizontalOptions="Center"
+                           TextColor="#666666" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <!-- Watermark -->
+            <Label Text="© 2026 SSG — All Rights Reserved"
+                   FontSize="12"
+                   HorizontalOptions="Center"
+                   TextColor="#555555"
+                   Margin="0,20,0,10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

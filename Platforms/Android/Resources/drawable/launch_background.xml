@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Solid background color (match your Maui splash color) -->
+  <item>
+    <shape android:shape="rectangle">
+      <solid android:color="#512BD4" />
+    </shape>
+  </item>
+
+  <!-- Centered app icon -->
+  <item android:drawable="@mipmap/appicon" android:gravity="center" />
+</layer-list>
